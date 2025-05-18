@@ -55,3 +55,11 @@ def sort_list(lst):
 numbers = [0,5,2]
 sorted=sort_list(numbers)
 print("second largest",sorted[-2])
+
+
+# Reverse Words in a String
+def rev(string):
+    print(string[::-1])
+    return rev
+lst="hello"
+rev(lst)
