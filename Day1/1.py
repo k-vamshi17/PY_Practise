@@ -38,3 +38,20 @@ def sort_list(lst):
 
 numbers = [0,5,2]
 print("sorted list ",sort_list(numbers))
+
+#3. Find the Second-Largest Number
+def sort_list(lst):
+    n = len(lst)
+    i = 0
+    while i < n:
+        j = 0
+        while j < (n - i - 1):
+            if lst[j] > lst[j + 1]:
+                lst[j], lst[j + 1] = lst[j + 1], lst[j]
+            j += 1
+        i += 1
+    return lst
+
+numbers = [0,5,2]
+sorted=sort_list(numbers)
+print("second largest",sorted[-2])
