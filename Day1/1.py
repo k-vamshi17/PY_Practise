@@ -39,7 +39,7 @@ def sort_list(lst):
 numbers = [0,5,2]
 print("sorted list ",sort_list(numbers))
 
-#3. Find the Second-Largest Number
+# Find the Second-Largest Number
 def sort_list(lst):
     n = len(lst)
     i = 0
