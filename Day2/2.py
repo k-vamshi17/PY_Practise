@@ -19,3 +19,19 @@ for i in range(len(merged_list)):
 
 # Print the sorted merged list
 print("Sorted List:", merged_list)
+
+# 2.Inverted Number Pyramid
+# 📌 Problem: Print this pattern without range() or string multiplication:
+n = 5  # You can change the height as needed
+
+row = n
+while row > 0:
+    num = 1
+    count = 0
+    line = []
+    while count < row:
+        line.append(str(num))
+        num += 1
+        count += 1
+    print(' '.join(line))
+    row -= 1
