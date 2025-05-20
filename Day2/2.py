@@ -1,4 +1,4 @@
-# Merge & Sort Two Lists without using sorted()
+# 1. Merge & Sort Two Lists without using sorted()
 
 # Define the first list
 list1 = [5, 2, 9, 1]
