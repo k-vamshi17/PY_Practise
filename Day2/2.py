@@ -35,3 +35,4 @@ while row > 0:
         count += 1
     print(' '.join(line))
     row -= 1
+    
