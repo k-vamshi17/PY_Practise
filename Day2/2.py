@@ -22,7 +22,7 @@ print("Sorted List:", merged_list)
 
 # 2.Inverted Number Pyramid
 # 📌 Problem: Print this pattern without range() or string multiplication:
-n = 5  # You can change the height as needed
+n = 5 # You can change the height as needed
 
 row = n
 while row > 0:
