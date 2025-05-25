@@ -47,4 +47,5 @@ while i < len(original_list):
     if item not in unique_list:
         unique_list.append(item)
     i += 1
+    
 print("List without duplicates:", unique_list)
