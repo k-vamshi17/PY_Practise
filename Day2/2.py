@@ -47,5 +47,24 @@ while i < len(original_list):
     if item not in unique_list:
         unique_list.append(item)
     i += 1
-    
+
 print("List without duplicates:", unique_list)
+
+def print_primes_upto_n(n):
+    num = 2
+    while num <= n:
+        is_prime = True
+        i = 2
+        while i * i <= num:
+            if num % i == 0:
+                is_prime = False
+                break
+            i += 1
+        if is_prime:
+            print(num, end=' ')
+        num += 1
+    print()
+
+# Example usage:
+print("Prime numbers up to 30:")
+print_primes_upto_n(30)
