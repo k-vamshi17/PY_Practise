@@ -35,3 +35,17 @@ while row > 0:
         count += 1
     print(' '.join(line))
     row -= 1
+
+#Remove Duplicates from a List Without Using Set
+#Write a program to remove duplicate elements from a list without using the set() function.
+
+original_list = [1, 2, 2, 3, 4, 4, 5, 1, 6]
+unique_list = []
+i = 0
+while i < len(original_list):
+    item = original_list[i]
+    if item not in unique_list:
+        unique_list.append(item)
+    i += 1
+
+print("List without duplicates:", unique_list)
