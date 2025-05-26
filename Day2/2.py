@@ -68,3 +68,4 @@ def print_primes_upto_n(n):
 # Example usage:
 print("Prime numbers up to 30:")
 print_primes_upto_n(30)
+
