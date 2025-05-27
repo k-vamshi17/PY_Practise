@@ -57,22 +57,22 @@
 
 #---------------------------------------------------------------- 
 
-def easytask(x, n, a):
-    seen = set()
-    count = 0
-    for num in a:
-        complement = x - num
-        if complement in seen:
-            count += 1
-        seen.add(num)
-    return count
+# def easytask(x, n, a):
+#     seen = set()
+#     count = 0
+#     for num in a:
+#         complement = x - num
+#         if complement in seen:
+#             count += 1
+#         seen.add(num)
+#     return count
 
-def main():
-    x = int(input())
-    n = int(input())
-    a = [int(input()) for _ in range(n)]
-    result = easytask(x, n, a)
-    print(result)
+# def main():
+#     x = int(input())
+#     n = int(input())
+#     a = [int(input()) for _ in range(n)]
+#     result = easytask(x, n, a)
+#     print(result)
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
