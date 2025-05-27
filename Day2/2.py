@@ -69,3 +69,30 @@ def print_primes_upto_n(n):
 print("Prime numbers up to 30:")
 print_primes_upto_n(30)
 
+def are_anagrams(str1, str2):
+    # Remove spaces and convert to lowercase
+    s1 = str1.replace(' ', '').lower()
+    s2 = str2.replace(' ', '').lower()
+
+    # If lengths differ, not anagrams
+    if len(s1) != len(s2):
+        return False
+
+    # Count characters manually
+    count1 = {}
+    count2 = {}
+
+    i = 0
+    while i < len(s1):
+        c1 = s1[i]
+        c2 = s2[i]
+        count1[c1] = count1.get(c1, 0) + 1
+        count2[c2] = count2.get(c2, 0) + 1
+        i += 1
+
+    return count1 == count2
+
+# Example usage:
+print(are_anagrams("listen", "silent"))  # True
+print(are_anagrams("hello", "world"))    # False
+
