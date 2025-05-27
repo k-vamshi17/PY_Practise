@@ -39,5 +39,20 @@
 # Output: [0,1]
 # Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
 
-nums=[2,7,11,15]
-target = 9
+# nums = [2, 7, 11, 15]
+# target = 9
+
+# def two_sum(nums, target):
+#     lookup = {}
+#     i = 0
+#     while i < len(nums):
+#         complement = target - nums[i]
+#         if complement in lookup:
+#             return [lookup[complement], i]
+#         lookup[nums[i]] = i
+#         i += 1
+
+# result = two_sum(nums, target)
+# print(result)
+
+#---------------------------------------------------------------
