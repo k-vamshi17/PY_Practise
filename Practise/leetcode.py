@@ -148,5 +148,4 @@
 #             if max(d1[i],d2[i]) < self.mini:
 #                 self.mini = max(d1[i],d2[i])
 #                 final_node = i
-                
 #         return final_node 
