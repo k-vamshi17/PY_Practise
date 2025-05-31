@@ -198,3 +198,13 @@
 #                     queue.append((next_square, moves + 1))
         
 #         return -1
+
+# ------------------------------------------------------------------------------
+
+nums=[2,2,36,5]
+val = 2
+z=[]
+for i in nums:
+    if i != val:
+        z.append(i)
+print(len(z))
