@@ -27,7 +27,7 @@
 # print(div,nondiv)
 # print(nondiv-div)
 
-##-----------------------------------------------------------------------------
+# #-----------------------------------------------------------------------------
 
 # Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 
@@ -55,7 +55,7 @@
 # result = two_sum(nums, target)
 # print(result)
 
-#---------------------------------------------------------------- 
+# ---------------------------------------------------------------- 
 
 # def easytask(x, n, a):
 #     seen = set()
