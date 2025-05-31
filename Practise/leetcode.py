@@ -152,49 +152,49 @@
 
 # ------------------------------------------------------------------------------------------------------------------
 
-from collections import deque
-from typing import List
+# from collections import deque
+# from typing import List
 
-class Solution:
-    def snakesAndLadders(self, board: List[List[int]]) -> int:
-        n = len(board)
+# class Solution:
+#     def snakesAndLadders(self, board: List[List[int]]) -> int:
+#         n = len(board)
         
-        def get_position(square):
-            # Convert square number to board coordinates
-            row = (square - 1) // n
-            col = (square - 1) % n
-            if row % 2 == 1:  # Even rows (0-indexed) are right-to-left
-                col = n - 1 - col
-            return n - 1 - row, col  # Convert to 0-indexed from bottom
+#         def get_position(square):
+#             # Convert square number to board coordinates
+#             row = (square - 1) // n
+#             col = (square - 1) % n
+#             if row % 2 == 1:  # Even rows (0-indexed) are right-to-left
+#                 col = n - 1 - col
+#             return n - 1 - row, col  # Convert to 0-indexed from bottom
         
-        visited = set()
-        queue = deque()
-        queue.append((1, 0))  # (current square, moves)
+#         visited = set()
+#         queue = deque()
+#         queue.append((1, 0))  # (current square, moves)
         
-        while queue:
-            square, moves = queue.popleft()
+#         while queue:
+#             square, moves = queue.popleft()
             
-            if square == n * n:
-                return moves
+#             if square == n * n:
+#                 return moves
                 
-            if square in visited:
-                continue
-            visited.add(square)
+#             if square in visited:
+#                 continue
+#             visited.add(square)
             
-            # Explore all possible dice rolls (1-6)
-            for i in range(1, 7):
-                next_square = square + i
-                if next_square > n * n:
-                    continue
+#             # Explore all possible dice rolls (1-6)
+#             for i in range(1, 7):
+#                 next_square = square + i
+#                 if next_square > n * n:
+#                     continue
                 
-                # Get the actual position on board
-                r, c = get_position(next_square)
+#                 # Get the actual position on board
+#                 r, c = get_position(next_square)
                 
-                # Check if there's a snake or ladder
-                if board[r][c] != -1:
-                    next_square = board[r][c]
+#                 # Check if there's a snake or ladder
+#                 if board[r][c] != -1:
+#                     next_square = board[r][c]
                 
-                if next_square not in visited:
-                    queue.append((next_square, moves + 1))
+#                 if next_square not in visited:
+#                     queue.append((next_square, moves + 1))
         
-        return -1
+#         return -1
