@@ -248,7 +248,7 @@ class Solution:
  let 3 denote both open & having
 """
 class Solution:
-    def maxCandies(self, status, candies, keys, containedBoxes, initialBoxes):
+    def maxCandies(self, status, candies, keys, containedBoxes, initialBoxes):  
         def dfs(i):
             ans=candies[i]
             status[i]=0
