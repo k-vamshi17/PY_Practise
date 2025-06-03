@@ -241,3 +241,27 @@ class Solution:
             if ratings[i] > ratings[i+1]:
                 candies[i] = max(candies[i],candies[i+1]+1)
         return sum(candies)
+
+# --------------------------------------------------------------------
+"""
+ To simplify code, reuse status 0 for closed, 1 for open & 2 for having
+ let 3 denote both open & having
+"""
+class Solution:
+    def maxCandies(self, status, candies, keys, containedBoxes, initialBoxes):
+        def dfs(i):
+            ans=candies[i]
+            status[i]=0
+            for k in keys[i]:
+                status[k]|=1
+                if status[k]==3: ans+=dfs(k)
+            for j in containedBoxes[i]:
+                status[j]|=2
+                if status[j]==3: ans+=dfs(j)
+            return ans
+        cnt=0
+        for i in initialBoxes:
+            status[i]|=2
+            if status[i]==3:
+                cnt+=dfs(i)
+        return cnt
