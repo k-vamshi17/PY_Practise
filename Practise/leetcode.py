@@ -379,4 +379,4 @@ class Solution(object):
         while st:
             res.append(st.pop())
 
-        return ''.join(res)
+        return ''.join(res) 
