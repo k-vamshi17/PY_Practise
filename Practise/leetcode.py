@@ -323,33 +323,6 @@ class Solution(object):
         
         return ''.join(result)
 
-# -----------------------------------------------------------------
-from collections import deque
-
-class Solution:
-    def robotWithString(s: str) -> str:
-
-        freq = [0] * 26
-        for c in s:
-            freq[ord(c) - ord('a')] += 1
-
-            t = []
-            p = []
-
-        for c in s:
-            t.append(c)
-            freq[ord(c) - ord('a')] -= 1
-
-        # Find the smallest character remaining in s or t
-        while t:
-            min_char = chr(ord('a') + next((i for i in range(26) if freq[i] > 0), 26))
-            if t[-1] <= min_char:
-                p.append(t.pop())
-            else:
-                break
-
-        return ''.join(p)
-
 # -------------------------------------------------------------------------------
 class Solution(object):
     def robotWithString(self, s):
