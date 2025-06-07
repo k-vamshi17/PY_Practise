@@ -377,3 +377,4 @@ class Solution(object):
 
         # Build result from characters not marked for removal
         return ''.join(s[i] for i in range(n) if keep[i])
+    
